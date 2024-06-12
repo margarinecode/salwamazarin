@@ -17,17 +17,54 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #11071f;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.menu-item {
+  background: none;
+  width: 170px;
+  height: 120px;
+  padding: 24px;
+}
+
+.menu-item::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 170px;
+  height: 120px;
+  background-image: radial-gradient(
+  
+    #763cac 1%,
+    #320f8576 40%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.menu-item:hover::before {
+  opacity: 1;
+}
+
+.menu-text {
+  width: 80px;
+  height: 40px;
+  position: fixed;
+  top: 40px;
+  text-align: right;
+}
+
+.test{
+  height: 900px;
 }
