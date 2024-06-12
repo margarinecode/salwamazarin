@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="flex gap-12 justify-center">
+        <div className="flex gap-12 justify-center fixed w-full header">
           {menu.map((x) => {
             return (
               <div className="relative" key={x.number}>

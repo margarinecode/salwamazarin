@@ -28,6 +28,10 @@ body {
   }
 }
 
+.header{
+  background: linear-gradient(#320f8576, transparent 100%);
+}
+
 .menu-item {
   background: none;
   width: 170px;
@@ -44,10 +48,9 @@ body {
   width: 170px;
   height: 120px;
   background-image: radial-gradient(
-  
-    #763cac 1%,
-    #320f8576 40%,
-    transparent 60%
+    /* #763cac 1%, */
+    #320f8576 10%,
+    transparent 80%
   );
   opacity: 0;
   transition: opacity 1s;
@@ -55,6 +58,10 @@ body {
 
 .menu-item:hover::before {
   opacity: 1;
+}
+
+.menu-item:hover{
+  color: #a28eb5;
 }
 
 .menu-text {
@@ -65,6 +72,3 @@ body {
   text-align: right;
 }
 
-.test{
-  height: 900px;
-}
