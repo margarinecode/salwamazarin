@@ -16,9 +16,15 @@
   }
 }
 
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../public/assets/fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Black.otf') format('otf');
+  font-style: normal;
+}
+
 body {
   color: white;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Satoshi", sans-serif;
   background-color: #11071f;
 }
 
@@ -29,17 +35,20 @@ body {
 }
 
 .header{
-  background: linear-gradient(#320f8576, transparent 100%);
+  background: linear-gradient(#560f854a, transparent 50%);
 }
 
 .menu-item {
   background: none;
   width: 170px;
-  height: 120px;
-  padding: 24px;
+  height: fit-content;
+  margin: 40px 24px;
+  font-family: 'Courier New', Courier, monospace;
+  /* border-bottom:  5px solid #11071f85; */
+
 }
 
-.menu-item::before {
+/* .menu-item::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -48,27 +57,39 @@ body {
   width: 170px;
   height: 120px;
   background-image: radial-gradient(
-    /* #763cac 1%, */
-    #320f8576 10%,
+    #11071f85 10%,
     transparent 80%
   );
+  text-decoration:  underline solid red 1px;
   opacity: 0;
   transition: opacity 1s;
 }
 
 .menu-item:hover::before {
   opacity: 1;
-}
+  text-decoration:  underline solid red 1px;
+
+} */
 
 .menu-item:hover{
   color: #a28eb5;
 }
 
-.menu-text {
-  width: 80px;
-  height: 40px;
-  position: fixed;
-  top: 40px;
-  text-align: right;
+.back{
+  background-image: radial-gradient(circle at top, #763cac95 5%, #4b1a7974 20%, transparent 50%);
 }
 
+.name{
+  text-align: center;
+    margin: 24px 0px;
+    text-wrap: balance;
+    background: linear-gradient(to right bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.38) 90%) text;
+    -webkit-box-decoration-break: clone;
+    -webkit-text-fill-color: transparent;
+    color: unset;
+    padding-bottom: 0.13em;
+    font-size: 80px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-weight: 900;
+}

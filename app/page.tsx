@@ -1,5 +1,5 @@
 "use client"
-import { MouseEventHandler, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
 
@@ -28,8 +28,8 @@ export default function Home() {
     }, 30);
   },[]);
   return (
-    <div className="pt-40">
-      <div className="h-[90vh] pt-10 text-center text-8xl">{name}</div>
+    <div className="pt-40 back">
+      <div className="h-[90vh] pt-10 text-center text-8xl name">{name}</div>
     </div>
   );
 }
