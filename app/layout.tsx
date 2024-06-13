@@ -31,6 +31,8 @@ export default function RootLayout({
   ];
   const [menuHeader, setMenuHeader] = useState(menu);
 
+  
+
   const hyperplexed = (text: string, index: number) => {
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let iterations = 0;

@@ -29,7 +29,10 @@ export default function Home() {
   },[]);
   return (
     <div className="pt-40 back">
-      <div className="h-[90vh] pt-10 text-center text-8xl name">{name}</div>
+      <div className="h-[100vh] pt-10 text-center">
+        <p className="text-8xl name">{name}</p>
+        <p className="text-2xl mt-4 stack">Frontend Engineer</p>
+      </div>
     </div>
   );
 }

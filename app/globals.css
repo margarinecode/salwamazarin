@@ -17,8 +17,9 @@
 }
 
 @font-face {
-  font-family: 'Satoshi';
-  src: url('../public/assets/fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Black.otf') format('otf');
+  font-family: "Satoshi";
+  src: url("../public/assets/fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Black.otf")
+    format("otf");
   font-style: normal;
 }
 
@@ -34,8 +35,14 @@ body {
   }
 }
 
-.header{
-  background: linear-gradient(#560f854a, transparent 50%);
+.header {
+  /* background: linear-gradient(#560f854a, transparent 50%); */
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+
 }
 
 .menu-item {
@@ -43,9 +50,8 @@ body {
   width: 170px;
   height: fit-content;
   margin: 40px 24px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   /* border-bottom:  5px solid #11071f85; */
-
 }
 
 /* .menu-item::before {
@@ -71,25 +77,57 @@ body {
 
 } */
 
-.menu-item:hover{
+.menu-item:hover {
   color: #a28eb5;
 }
 
-.back{
-  background-image: radial-gradient(circle at top, #763cac95 5%, #4b1a7974 20%, transparent 50%);
+.back {
+  background-image: radial-gradient(
+    circle at top,
+    #763cac95 5%,
+    #4b1a7974 20%,
+    transparent 50%
+  );
 }
 
-.name{
+.name {
   text-align: center;
-    margin: 24px 0px;
-    text-wrap: balance;
-    background: linear-gradient(to right bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.38) 90%) text;
-    -webkit-box-decoration-break: clone;
-    -webkit-text-fill-color: transparent;
-    color: unset;
-    padding-bottom: 0.13em;
-    font-size: 80px;
-    line-height: 1;
-    letter-spacing: -0.02em;
-    font-weight: 900;
+  margin: 24px 0px;
+  text-wrap: balance;
+  background: linear-gradient(
+      to right bottom,
+      rgb(255, 255, 255),
+      rgba(255, 255, 255, 0.38) 90%
+    )
+    text;
+  -webkit-box-decoration-break: clone;
+  -webkit-text-fill-color: transparent;
+  color: unset;
+  padding-bottom: 0.13em;
+  font-size: 80px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 900;
+}
+
+@keyframes change-color {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.8;
+  }
+}
+
+.stack {
+  animation-name: change-color;
+  animation-duration: 3s;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.659);
 }
