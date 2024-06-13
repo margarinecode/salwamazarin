@@ -10,7 +10,7 @@ export default function RootLayout({
   const menu = [
     {
       title: "Home",
-      link: "/",
+      link: "#home",
     },
     {
       title: "Expertise",
@@ -62,12 +62,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="flex gap-12 justify-center fixed w-full header">
+        <div className="flex  justify-center fixed w-full header">
           {menuHeader.map((x, index) => {
             return (
               <div className="relative h-fit" key={index}>
                 <div
-                  className="menu-item"
+                  className="menu-item w-fit my-8 sm:mx-8 xl:mx-10"
                   onMouseEnter={() => {
                     setMenuHeader(menu);
                     hyperplexed(x.title, index);
@@ -76,7 +76,7 @@ export default function RootLayout({
                     setMenuHeader(menu);
                   }}
                 >
-                  <div className="menu-text w-fit text-left h-fit relative top-[35%]">
+                  <div className="menu-text w-full text-center h-fit relative top-[35%]">
                     <p>.{x.title}()</p>
                   </div>
                 </div>
